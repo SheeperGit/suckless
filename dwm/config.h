@@ -107,6 +107,7 @@ static const char *battcmd[]   = { "batt", NULL };
 static const char *btcmd[]     = { "bt", NULL };
 static const char *scrcmd[]    = { "scrshot", NULL };
 static const char *scrselcmd[] = { "scrshot", "-s", NULL };
+static const char *recordcmd[] = { "record", NULL };
 static const char *camtogcmd[] = { "camtog", NULL };
 static const char *clipcmd[]   = { "lora-clip", NULL };
 
@@ -173,6 +174,7 @@ static const Key keys[] = {
 	{ ControlMask|ShiftMask,	    XK_Escape,	 spawn,           {.v = htopcmd } }, 	/* Launch htop. */
 	{ ControlMask|ShiftMask,	      XK_b,		   spawn,	          {.v = battcmd } },  /* Display device battery. */
 	{ ControlMask|MODKEY,		        XK_p,		   spawn,	          {.v = ptogcmd } }, 	/* Toggle pia-vpn. */
+	{ ControlMask|MODKEY,		        XK_r,		   spawn,	        {.v = recordcmd } }, 	/* Record video/audio/webcam. */
 	{ ControlMask|MODKEY,	          XK_c,	     spawn,	        {.v = camtogcmd } }, 	/* Toggle webcam view. */
 	{ ControlMask|MODKEY,           XK_g,		   spawn,	            {.v = bgcmd } }, 	/* Change background. */
 	{ ControlMask|MODKEY,           XK_l,		   spawn,	          {.v = clipcmd } }, 	/* Various useful LoRA clipboards. */

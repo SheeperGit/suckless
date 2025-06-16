@@ -8,6 +8,7 @@ static const Block blocks[] = {
 	/* {"",	 "sb-pacpackages",	    0,	                8},    */
 	/* {"",	 "sb-torrent",	       20,	                7},    */
 	/* {"",	 "sb-memory",	         10,	               14},    */
+     {"", "cat /tmp/recordingicon 2>/dev/null",	0,	  9},
 	/* {"",	 "sb-cpu",		         10,	               18},    */
 	   {"",	 "sb-weather",	     3600,	                5},
 	/* {"",	 "sb-nettraf",	        1,	               16},    */
