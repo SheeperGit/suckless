@@ -35,8 +35,8 @@
 *.i*86
 *.x86_64
 *.hex
-dwm
-dwmblocks
+dwm/dwm
+blocks/dwmblocks
 
 # Debug files
 *.dSYM/
