@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"dwmblocks", NULL,
-	"picom", NULL,
+	"sh", "-c", "picom --config \"$XDG_CONFIG_HOME/picom/picom.conf\"", NULL,
 	"dunst", NULL,
 	"sh", "-c", "discord &", NULL,
 	"sh", "-c", "sleep 28 ; firefox &", NULL,  
