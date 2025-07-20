@@ -27,8 +27,9 @@ static const char *const autostart[] = {
 	"sh", "-c", "picom --config \"$XDG_CONFIG_HOME/picom/picom.conf\"", NULL,
 	"dunst", NULL,
 	"sh", "-c", "discord &", NULL,
-	"sh", "-c", "sleep 28 ; firefox &", NULL,  
+	"sh", "-c", "sleep 28 ; firefox &", NULL,
 	"sh", "-c", "sleep 15 ; kill -44 $(pidof dwmblocks)", NULL,	/* Refresh volume block at startup. Ensures correct startup volume display */
+  "sh", "-c", "mon-vol", NULL,
 	NULL /* terminate */
 };
 
