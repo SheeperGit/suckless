@@ -27,9 +27,9 @@ static const char *const autostart[] = {
 	"sh", "-c", "picom --config \"$XDG_CONFIG_HOME/picom/picom.conf\"", NULL,
 	"dunst", NULL,
 	"sh", "-c", "discord &", NULL,
-	"sh", "-c", "sleep 28 ; firefox &", NULL,
-	"sh", "-c", "sleep 15 ; kill -44 $(pidof dwmblocks)", NULL,	/* Refresh volume block at startup. Ensures correct startup volume display */
-  "sh", "-c", "mon-vol", NULL,
+	"sh", "-c", "sleep 2 ; firefox &", NULL,
+//	"sh", "-c", "sleep 15 ; kill -44 $(pidof dwmblocks)", NULL,	/* Refresh volume block at startup. Ensures correct startup volume display */
+  "sh", "-c", "mon-vol &", NULL,
 	NULL /* terminate */
 };
 
@@ -99,6 +99,7 @@ static const char *suspcmd[]   = { "prompt", "Are you sure you want to sleep?", 
 static const char *htopcmd[]   = { "st", "-e", "htop", NULL };
 static const char *nvimcmd[]   = { "st", "-e", "nvim", NULL };
 static const char *lfcmd[]     = { "st", "-e", "lf", NULL };
+static const char *pcmancmd[]  = { "pcmanfm", NULL };
 static const char *ptogcmd[]   = { "pia-toggle", NULL };
 static const char *emucmd[]    = { "emu", NULL };
 static const char *progcmd[]   = { "prog", NULL };
@@ -174,6 +175,7 @@ static const Key keys[] = {
 	{ ControlMask,	              XK_Print,	   spawn,         {.v = scrselcmd } }, 	/* Take a select-region screenshot. */
 	{ ControlMask|ShiftMask,	    XK_Escape,	 spawn,           {.v = htopcmd } }, 	/* Launch htop. */
 	{ ControlMask|ShiftMask,	      XK_b,		   spawn,	          {.v = battcmd } },  /* Display device battery. */
+	{ ControlMask|MODKEY,						XK_f,		   spawn,	         {.v = pcmancmd } }, 	/* Launch pcmanfm file manager. */
 	{ ControlMask|MODKEY,		        XK_p,		   spawn,	          {.v = ptogcmd } }, 	/* Toggle pia-vpn. */
 	{ ControlMask|MODKEY,		        XK_r,		   spawn,	        {.v = recordcmd } }, 	/* Record video/audio/webcam. */
 	{ ControlMask|MODKEY,	          XK_c,	     spawn,	        {.v = camtogcmd } }, 	/* Toggle webcam view. */
