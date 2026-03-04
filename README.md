@@ -41,10 +41,3 @@ In such cases, manual user intervention is required.
 
 Take a look at all `.rej` files to see which lines failed to be applied and apply them manually to the corresponding files.
 
-## Notes
-`statuscmd` is not currently set up between `dwm` and `dwmblocks`.
-
-That is because it is not configured.
-
-I plan to re-patch `dwm` from the ground-up so that it will work well with `dwmblocks` in the future.
-
