@@ -39,7 +39,7 @@ dwm/dwm
 dmenu/dmenu
 dmenu/stest
 st/st
-blocks/dwmblocks
+blocks-async/build/
 
 # Debug files
 *.dSYM/

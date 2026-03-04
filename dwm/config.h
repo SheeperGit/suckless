@@ -1,7 +1,5 @@
 /* See LICENSE file for copyright and license details. */
 
-#define STATUSBAR "dwmblocks"
-
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 15;       /* gaps between windows */
@@ -28,7 +26,6 @@ static const char *const autostart[] = {
 	"dunst", NULL,
 	"sh", "-c", "discord &", NULL,
 	"sh", "-c", "sleep 2 ; firefox &", NULL,
-//	"sh", "-c", "sleep 15 ; kill -44 $(pidof dwmblocks)", NULL,	/* Refresh volume block at startup. Ensures correct startup volume display */
   "sh", "-c", "mon-vol &", NULL,
 	NULL /* terminate */
 };
@@ -57,6 +54,7 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int attachbelow = 1;    /* 1 means attach after the currently active window */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const int refreshrate = 120;  /* refresh rate (per second) for client move/resize */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -147,7 +145,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-  KEYPADTAGKEYS(                  XK_KP_End,                 0) /********************************************/
+	KEYPADTAGKEYS(                  XK_KP_End,                 0) /********************************************/
 	KEYPADTAGKEYS(                  XK_KP_Down,                1) /********************************************/
 	KEYPADTAGKEYS(                  XK_KP_Next,                2) /********************************************/
 	KEYPADTAGKEYS(                  XK_KP_Left,                3) /********************************************/
@@ -190,9 +188,15 @@ static const Button buttons[] = {
 //	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} }, /* Causes crashes (reason unknown) */
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button1,        sigdwmblocks,   {.i = 1} },
-	{ ClkStatusText,        0,              Button2,        sigdwmblocks,   {.i = 2} },
-	{ ClkStatusText,        0,              Button3,        sigdwmblocks,   {.i = 3} },
+	{ ClkStatusText,        0,              Button1,        sigstatusbar,   {.i = 1} },
+	{ ClkStatusText,        0,              Button2,        sigstatusbar,   {.i = 2} },
+	{ ClkStatusText,        0,              Button3,        sigstatusbar,   {.i = 3} },
+	{ ClkStatusText,        0,              Button4,        sigstatusbar,   {.i = 4} },
+	{ ClkStatusText,        0,              Button5,        sigstatusbar,   {.i = 5} },
+	{ ClkStatusText,        0,              6,              sigstatusbar,   {.i = 6} },
+	{ ClkStatusText,        0,              7,              sigstatusbar,   {.i = 7} },
+	{ ClkStatusText,        0,              8,              sigstatusbar,   {.i = 8} },
+	{ ClkStatusText,        0,              9,              sigstatusbar,   {.i = 9} },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
