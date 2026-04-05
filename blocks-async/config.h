@@ -27,12 +27,13 @@
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X)             \
-     X("", "cat /tmp/recordingicon 2>/dev/null",	0,     9) \
-	   X("", "sb-weather",	                        3600,	 5) \
-	   X("", "sb-volume",	                          0,    10) \
-	   X("", "sb-internet",	                        20,    4) \
-	   X("", "sb-date",	                            59,    2) \
-	   X("", "sb-time",	                            59,    1) \
+     X("", "cat /tmp/recordingicon 2>/dev/null",	0,    19) \
+     X("", "sb-music",	                          0,    20) \
+	   X("", "sb-weather",	                        3600,	26) \
+	   X("", "sb-volume",	                          0,    27) \
+	   X("", "sb-internet",	                        20,   28) \
+	   X("", "sb-date",	                            59,   29) \
+	   X("", "sb-time",	                            59,   30) \
 
 #endif  // CONFIG_H
 
