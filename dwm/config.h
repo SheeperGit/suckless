@@ -24,9 +24,11 @@ static const char *const autostart[] = {
 	"dwmblocks", NULL,
 	"sh", "-c", "picom --config \"$XDG_CONFIG_HOME/picom/picom.conf\"", NULL,
 	"dunst", NULL,
-	"sh", "-c", "discord &", NULL,
-	"sh", "-c", "sleep 2 ; firefox &", NULL,
-  "sh", "-c", "mon-vol &", NULL,
+	"sh", "-c", "discord", NULL,
+	"sh", "-c", "sleep 2 ; firefox", NULL,
+  "sh", "-c", "mon-vol", NULL,
+  "sh", "-c", "mon-music", NULL,
+	"sh", "-c", "redshift", NULL,
 	NULL /* terminate */
 };
 
