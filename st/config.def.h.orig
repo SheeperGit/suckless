@@ -6,10 +6,6 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Hack Nerd Font Mono:pixelsize=28:antialias=true:autohint=true";
-/* Spare fonts */
-static char *font2[] = {
-  "Noto Color Emoji:style=Regular:size=10", 
-};
 static int borderpx = 2;
 
 /*
